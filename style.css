@@ -6,7 +6,7 @@
 }
 
 :root {
-  --bg-url: url(./assets/bg-desktop-dark.jpg);
+  --bg-url: url(./assets/bg-mobile-dark.jpg);
   --switch-bg-url: url(./assets/moon-stars.svg);
 
   --text-color: #fff;
@@ -18,7 +18,7 @@
 }
 
 .light {
-  --bg-url: url(./assets/bg-desktop-light.jpg);
+  --bg-url: url(./assets/bg-mobile-light.jpg);
   --switch-bg-url: url(./assets/sun.svg);
 
   --text-color: #000;
@@ -30,6 +30,7 @@
 
 body {
   background: var(--bg-url) no-repeat top center / cover;
+  height: 100vh;
 }
 
 body * {
@@ -173,4 +174,15 @@ body * {
 
 #footer a:hover {
   opacity: 0.5;
+}
+
+/* Media Queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop-dark.jpg)
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg)
+  }
 }
